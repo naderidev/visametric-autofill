@@ -44,7 +44,7 @@ const VA_CONFIG = {
     ]
 }
 var script = document.createElement('script')
-script.src = 'http://localhost/plugin.js'
+script.src = 'https://raw.githubusercontent.com/naderidev/visametric-autofill/master/plugin.js'
 script.type = 'text/javascript'
 document.body.appendChild(script)
 ```
