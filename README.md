@@ -48,7 +48,7 @@ script.src = 'http://localhost/plugin.js'
 script.type = 'text/javascript'
 document.body.appendChild(script)
 ```
-then install an extension for injucting javascript into page for your browser.
+then install an extension for injecting javascript into page for your browser.
 -  for chrome ```Custom JavaScript for Websites 2``` is good.
 
 then copy the whole this code and paste that in the code section of that extension and apply it to page.
