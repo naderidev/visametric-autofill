@@ -24,6 +24,10 @@ if (window.location.href === 'https://ir-appointment.visametric.com/ir/appointme
                 }
             }
 
+            function wait(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+
             function selectCityStep(reload = false) {
                 const cityElement = $("#city")
                 if (cityElement.find('option[value="' + VA_CONFIG['city'] + '"]') !== undefined) {
@@ -50,7 +54,9 @@ if (window.location.href === 'https://ir-appointment.visametric.com/ir/appointme
 
                 } else {
                     console.log('STEP 5 --> Failed in loading offices! retrying...')
-                    selectCityStep(true)
+                    wait(3000).then(r => {
+                        selectCityStep(true)
+                    })
 
                 }
             }
@@ -73,7 +79,9 @@ if (window.location.href === 'https://ir-appointment.visametric.com/ir/appointme
                     selectAndFillPaymentInfo()
                 } else {
                     console.log('STEP 5 --> Total person selection failed! retrying...')
-                    selectTotalPerson()
+                    wait(4000).then(r => {
+                        selectTotalPerson()
+                    })
                 }
             }
 
@@ -92,14 +100,16 @@ if (window.location.href === 'https://ir-appointment.visametric.com/ir/appointme
                 const payment = paymentCheckList.find("input[class='bankpaymentRadio']")
                 if (payment !== undefined) {
                     payment[0].click()
+                    next.trigger('click')
+                    prevent429()
+                    console.log('STEP 5 --> Payment selected & first section finished')
+                    fillPersonalData()
                 } else {
                     console.log('STEP 5 --> Failed in loading payment! retrying...')
-                    selectAndFillPaymentInfo()
+                    wait(3000).then(r => {
+                        selectAndFillPaymentInfo()
+                    })
                 }
-                next.trigger('click')
-                prevent429()
-                console.log('STEP 5 --> Payment selected & first section finished')
-                fillPersonalData()
             }
 
             function fillPersonalData() {
