@@ -9,48 +9,6 @@ if (window.location.href === 'https://ir-appointment.visametric.com/ir/appointme
         clearInterval(x)
 
         // Config -->
-
-        // Sample Config:
-        // const VA_CONFIG = {
-        //     'city': 0,
-        //     'office': 0,
-        //     'officeType': 0,
-        //     'card': {
-        //         'number': '**********',
-        //         'date': '0000/00/00'
-        //     },
-        //     'sheba': {
-        //         'number': '***********************',
-        //         'holderName': '*******'
-        //     },
-        //     'persons': [
-        //         {
-        //             'name': '*****',
-        //             'surname': '*****',
-        //             'birthDate': [
-        //                 '0000',
-        //                 '00',
-        //                 '00'
-        //             ],
-        //             'passport': '**********',
-        //             'phone': '**********',
-        //             'email': '******@gmail.com'
-        //         },
-        //         {
-        //             'name': '*****',
-        //             'surname': '*****',
-        //             'birthDate': [
-        //                 '0000',
-        //                 '00',
-        //                 '00'
-        //             ],
-        //             'passport': '*******',
-        //             'phone': '*********',
-        //             'email': '******@gmail.com'
-        //         },
-        //         ...
-        //     ]
-        // }
         if (typeof VA_CONFIG === 'undefined') {
             console.log('ERROR: VA_CONFIG not found! please define your own config.')
             return null
