@@ -1,4 +1,4 @@
-# Vismetric  autofill
+# Visametric  autofill
 a script for fast auto fill visametric appointment form
 
 ## setup
