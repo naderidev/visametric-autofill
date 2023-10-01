@@ -29,18 +29,7 @@ const VA_CONFIG = {
             'phone': '**********',
             'email': '******@gmail.com'
         },
-        {
-            'name': '*****',
-            'surname': '*****',
-            'birthDate': [
-                '0000', // Year
-                '00', // Month
-                '00' // Day
-            ],
-            'passport': '*******',
-            'phone': '*********',
-            'email': '******@gmail.com'
-        },
+        ...
     ]
 }
 var script = document.createElement('script')
