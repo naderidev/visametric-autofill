@@ -29,7 +29,7 @@ const VA_CONFIG = {
             'phone': '**********',
             'email': '******@gmail.com'
         },
-        ...
+        // ...
     ]
 }
 var script = document.createElement('script')
